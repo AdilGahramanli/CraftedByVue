@@ -44,6 +44,14 @@
           "description": "Beautiful ceramic vase with hand-painted designs.",
           "image_name": "ceramic_vase.png",
           "price": 60.00
+        },
+        {
+          "id": 9,
+          "name": "Pearl Bracelet",
+          "category": "joaillerie",
+          "description": "Classic pearl bracelet with sterling silver clasp.",
+          "image_name": "pearl_bracelet.png",
+          "price": 80.00
         }
       ]
     },

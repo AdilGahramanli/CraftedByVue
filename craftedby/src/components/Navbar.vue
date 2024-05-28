@@ -30,7 +30,7 @@
       <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
         <div class="card-body">
           <div class="card-actions">
-            <RouterLink to="cart"><button class="btn btn-primary btn-block">View cart</button></RouterLink>
+            <RouterLink to="cart"><img class="w-10 h-10" src="../assets/cartlogo.png"></RouterLink>
           </div>
         </div>
     </div>
@@ -38,8 +38,8 @@
 
     <div class="navbar-end">
       <details class="dropdown">
-        <summary class="m-1 btn">
-          <img src="../assets/menu.svg" class="w-6 h-6">
+        <summary class="m-1">
+          <img src="../assets/menu.svg" class="w-10 h-10">
         </summary>
         <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <li><a>Item 1</a></li>
