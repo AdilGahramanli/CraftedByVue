@@ -4,6 +4,8 @@
 </script>
 
 <template>
+<!--  Ajouter un caddie-->
+
   <div class="navbar bg-rose-peau h-20 w-full grid grid-cols-7">
     <div class="w-full">
 

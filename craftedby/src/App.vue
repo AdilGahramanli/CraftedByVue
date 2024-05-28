@@ -19,5 +19,7 @@ import HomeView from '@/views/HomeView.vue'
 
   <RouterView></RouterView>
 
-
+<footer>
+  About us - contact Us - Cgv - Politique de confidentialité
+</footer>
 </template>
