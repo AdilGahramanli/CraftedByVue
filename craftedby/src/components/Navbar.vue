@@ -41,9 +41,10 @@
         <summary class="m-1">
           <img src="../assets/menu.svg" class="w-10 h-10">
         </summary>
-        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
+        <ul class="p-2 shadow menu dropdown-content z-10 bg-base-100 rounded-box w-52">
+          <li><RouterLink to="/account"><a>Mon profil</a></RouterLink></li>
+          <li><RouterLink to="/cart"><a>Mon panier</a></RouterLink></li>
+          <li><RouterLink to="/products"><a>Les produits</a></RouterLink></li>
         </ul>
       </details>
     </div>

@@ -16,7 +16,7 @@ import HomeView from '@/views/HomeView.vue'
 <!--      </nav>-->
 <!--  </header>-->
   <header class="w-full">
-    <navbar></navbar>
+    <navbar class="z-10"></navbar>
   </header>
 
   <RouterView></RouterView>

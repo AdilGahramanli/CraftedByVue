@@ -7,7 +7,7 @@ produits est faite en priorité avec un lien cliquable vers produits-->
 <!--  la div devenez un vendeur est comme la div concept-->
 
 <h1>home</h1>
-  <div class = "bg-fond grid grid-rows-4 gap-2 inline-block align-baseline">
+  <div class = "bg-fond grid grid-rows-4 gap-2 inline-block align-baseline mt-28">
     <div class="h-24 w-3/4 border-solid border-2 bg-fond  border-rose-peau gap-1">
     </div>
     <div class="h-24 w-3/4 border-solid border-2 bg-fond  border-rose-peau gap-1">

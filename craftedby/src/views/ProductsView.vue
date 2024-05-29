@@ -1,10 +1,12 @@
 <script setup>
 //Afficher pop up "achat effectué" si achat payé.
 import axios from 'axios';
+// import { useCartStore } from '@/stores/cart.js'
 
 // eslint-disable-next-line vue/no-export-in-script-setup
 import ProductList from '../components/ProductList.vue';
 
+// let cart = {};
 </script>
 
 <template>
@@ -28,6 +30,7 @@ import ProductList from '../components/ProductList.vue';
 
   <div id="app">
     <ProductList/>
+
   </div>
 
 </template>
