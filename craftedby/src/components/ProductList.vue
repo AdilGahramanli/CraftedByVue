@@ -1,61 +1,27 @@
 
 <template>
-<!--  {{stores}}-->
-  <div v-for="product in stores" :key="product.id" class="store">
-    <ul>
-      <li class="m-12 flex w-full items-center">
-        <h1 class="text-4xl">{{ product.title }}</h1>
-        <RouterLink :to="`store/${product.id}`"><button @click="product.id">Visit the store</button></RouterLink>
-          <ul>
-            <li>
-              <RouterLink :to="`/products/${product.id}`">
-                <div class="card-body w-50 border-solid hover:border-2 hover:shadow-lg m-2 ">
-                <h2 class="card-title text-3xl text-center">{{ product.title }}</h2>
-                <figure><img class="w-32" :src="product.image" alt="image of product"></figure>
-                <p class="text-center">{{ product.description }}</p>
-                <p class="text-center"><strong>Category:</strong> {{ product.category }}</p>
-                <p class="text-center"><strong>Price:</strong> {{ product.price }} €</p>
-                <div class="card-actions">
-                  <button class="btn btn-primary" @click="cartStore.addToCart(product)">
-                    Add to Cart
-                  </button>
-                </div>
-                <button class=" border-solid bg-emerald-300 self-center">View Details</button>
-              </div>
-              </RouterLink>
-            </li>
-          </ul>
+  <div  class="p-12">
+    <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <li v-for="product in  stores" :key="product.id" class="store col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
+                <div class="card-body border-solid hover:border-2 hover:shadow-lg m-2 w-30 box-border">
+                  <h2 class="card-title text-3xl text-center box-border">{{ product.title }}</h2>
+                  <figure class="w-32"><img  :src="product.image" alt="image of product"></figure>
+                  <p class="text-center box-border">{{ product.description }}</p>
+                  <p class="text-center box-border"><strong>Category:</strong> {{ product.category }}</p>
+                  <p class="text-center box-border"><strong>Price:</strong> {{ product.price }} €</p>
+                  <div class="grid grid-cols-2 items-center align-baseline">
+                    <button class="btn btn-primary bg-gray-300 self-center box-border mx-5" @click="cartStore.addToCart(product)">
+                        Add to Cart
+                      </button>
+                        <button class=" border-solid bg-emerald-300 self-center box-border mx-5">
+                          <RouterLink :to="`/products/${product.id}`">View Details</RouterLink>
+                        </button>
 
-
+                  </div>
+  </div>
       </li>
     </ul>
   </div>
-
-
-
-
-
-<!--<div v-for="store in stores" :key="store.id" class="store">-->
-<!--  <div v-for="product in store.products" :key="product.id" class="product">-->
-<!--    <div class="card w-96 bg-base-100 shadow-xl">-->
-<!--          <h2>{{ store.name }}</h2>-->
-<!--      <div class="card-body">-->
-<!--        <ul>-->
-<!--          <li>-->
-<!--            <h2 class="card-title">{{ product.name }}</h2>&ndash;&gt;-->
-<!--            <figure><img :src="`../src/assets/products/${product.image_name}`" alt="image of product"></figure>-->
-<!--            <p>{{ product.description }}</p>-->
-<!--            <p><strong>Category:</strong> {{ product.category }}</p>&ndash;&gt;-->
-<!--            <p><strong>Price:</strong> {{ product.price }} €</p>-->
-<!--            <div class="card-actions justify-end">-->
-<!--              <button class="btn btn-primary">Buy Now</button>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
 </template>
 
 <script setup>

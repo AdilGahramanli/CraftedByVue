@@ -16,6 +16,7 @@ export const useCartStore = defineStore('cart', {
     getAllCartProductsToString: (state) => {
       return state.cart;
     }
-  }
+  },
+    persist: true
 })
 

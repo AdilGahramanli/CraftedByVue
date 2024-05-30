@@ -14,7 +14,9 @@ produits est faite en priorité avec un lien cliquable vers produits-->
 
     </div>
     <div class="h-24 w-3/4 border-solid border-2 bg-fond  border-rose-peau gap-1">
-      <router-link to="products">Produits</router-link>
+      <router-link to="products">
+        <h1>Produits</h1>
+      </router-link>
     </div>
     <div class="h-24 w-3/4 border-solid border-2 bg-fond  border-rose-peau gap-1">
 
@@ -27,4 +29,5 @@ produits est faite en priorité avec un lien cliquable vers produits-->
 // const { data: products } = useFetch('https://fakestoreapi.com/products?limit=21').json()
 // import Navbar from '@/components/Navbar.vue'
 // import AccueilCard from '@/components/AccueilCard.vue'
+import ProductList from '@/components/ProductList.vue'
 </script>

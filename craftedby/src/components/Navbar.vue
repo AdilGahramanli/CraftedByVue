@@ -11,7 +11,7 @@
 
     </div>
     <div class="navbar-start w-3/4">
-      <router-link to="/"><img alt="Vue logo" class="logo w-full" src="@/assets/logo.svg" /></router-link>
+      <router-link to=""><img alt="Vue logo" class="logo w-full" src="@/assets/logo.svg" /></router-link>
     </div>
     <div class="w-full">
 
