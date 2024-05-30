@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useCartStore = defineStore('cart', {
   state:() => ({
-    cart:{}
+    cart:[]
   }),
   actions: {
     addToCart(product) {
@@ -13,8 +13,8 @@ export const useCartStore = defineStore('cart', {
     }
   },
   getters: {
-    getAllCartProductsToString() {
-      return this.cart;
+    getAllCartProductsToString: (state) => {
+      return state.cart;
     }
   }
 })

@@ -7,6 +7,7 @@ export default {
     const stores = ref([]);
     const route = useRoute();
     const id = route.params.id;
+    const selectedArtisan = ref('toto')
     // const storeJson = JSON.parse(stores)
 
     onMounted(() => {
@@ -14,6 +15,8 @@ export default {
         .then(response => response.json())
         .then(data => {
           stores.value = data.stores;
+          selectedArtisan.value = stores.value.find(item => item.id == id)
+          console.log(selectedArtisan.value)
         })
         .catch(error => {
           console.error("There was an error!", error);
@@ -21,7 +24,7 @@ export default {
     });
 
     return {
-      stores, id
+      stores, id, selectedArtisan
     };
   }
 };
@@ -29,8 +32,23 @@ export default {
 
 <template>
 
-  {{ stores[id - 1 ] }}
+<!--  {{ stores[id - 1 ] }}-->
+  <h1>{{ selectedArtisan.name }}</h1>
+  <p>{{ selectedArtisan.description }}</p>
+  <div v-for="product in selectedArtisan.products" :key="product.id">
+    {{ product.name }}
+    {{product.image_name}}
+    {{product.category}}
+    {{product.description}}
+    {{product.price}}
+  </div>
+
+
+
+  <p>---------------------------------</p>
+<!--  {{ stores }}-->
   <RouterLink to="/cart"> <button> acheter </button> </RouterLink>
+
 <!--  <div v-for="items in stores[id - 1]">-->
 <!--    <p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 <!--    {{ items["products"] }}-->

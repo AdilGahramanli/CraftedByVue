@@ -30,7 +30,7 @@
       <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
         <div class="card-body">
           <div class="card-actions">
-            <RouterLink to="cart"><img class="w-10 h-10" src="../assets/cartlogo.png"></RouterLink>
+            <RouterLink to="/cart"><img class="w-10 h-10" src="../assets/cartlogo.png"></RouterLink>
           </div>
         </div>
     </div>
