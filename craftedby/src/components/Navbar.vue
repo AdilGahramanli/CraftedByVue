@@ -10,9 +10,9 @@
     <div class="w-full">
 
     </div>
-    <div class="navbar-start w-3/4">
-      <router-link to=""><img alt="Vue logo" class="logo w-full" src="@/assets/logo.svg" /></router-link>
-    </div>
+    <router-link to="/"><div class="navbar-start w-3/4">
+      <img alt="Vue logo" class="logo w-full" src="@/assets/logo.svg" />
+    </div></router-link>
     <div class="w-full">
 
     </div>
@@ -42,6 +42,7 @@
           <img src="../assets/menu.svg" class="w-10 h-10">
         </summary>
         <ul class="p-2 shadow menu dropdown-content z-10 bg-base-100 rounded-box w-52">
+          <li><RouterLink to="/"><a>Accueil</a></RouterLink></li>
           <li><RouterLink to="/account"><a>Mon profil</a></RouterLink></li>
           <li><RouterLink to="/cart"><a>Mon panier</a></RouterLink></li>
           <li><RouterLink to="/products"><a>Les produits</a></RouterLink></li>

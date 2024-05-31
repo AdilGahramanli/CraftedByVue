@@ -3,15 +3,22 @@
 // import {} from {"../stores/cart.js"}
 import {useCartStore} from '@/stores/cart.js'
 const cartStore = useCartStore()
+// const total = 0;
+
+
+
 </script>
 
 <template>
   <h2>Mon panier</h2>
   <ul>
     <li v-for="(product, index) in cartStore.getAllCartProductsToString" :key="index" class="w-200 border-2">
-      <p>{{ product.id }} - {{ product.title }} - {{ product.price }} € - quantité </p>
+      <p>{{ product.id }} - {{ product.title }} - {{ product.price }} € - quantité: {{product.quantity}} </p>
+      <p>Total prix: {{cartStore.getTotalPrice}}</p>
       <button @click="cartStore.removeFromCart(index)">Remove</button>
     </li>
+<!--    <p>Votre panier contient {{cartStore.getTotalQuantity}} produits.</p>-->
+<!--        <p class="text-xl">{{ // getTotalPrice({{ product }}) }}</p>-->
   </ul>
 
 

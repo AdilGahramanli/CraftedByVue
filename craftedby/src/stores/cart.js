@@ -8,7 +8,16 @@ export const useCartStore = defineStore('cart', {
   // Actions: Methods to manipulate the state of the cart
   actions: {
     addToCart(product) {
-      this.cart.push(product);
+      if(this.cart.includes(product)) {
+        product.quantity+=1;
+        product.priceTotal=product.priceTotal + product.price;
+      }
+      else {
+        this.cart.push(product);
+        product['quantity']=1;
+        product['priceTotal']=product['price']
+      }
+
     },
     removeFromCart(idx) {
       this.cart.splice(idx,1 );
@@ -18,7 +27,13 @@ export const useCartStore = defineStore('cart', {
   getters: {
     getAllCartProductsToString: (state) => {
       return state.cart;
+    },
+    getTotalQuantity:(state) => {
+      return state.cart.reduce((acc, cv) => acc + cv.quantity,0)
     }
+    // getTotalPrice:(state) => {
+    //   return state.cart.reduce((acc, cv) => acc + cv['product'].priceTotal)
+    // }
   },
   // Enable persistence of the cart state
     persist: true

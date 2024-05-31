@@ -43,12 +43,7 @@ export default {
     {{product.price}}
   </div>
 
-
   <RouterLink to="/cart"> <button> acheter </button> </RouterLink>
-
-
-
-
 
 </template>
 
