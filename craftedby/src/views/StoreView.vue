@@ -44,43 +44,11 @@ export default {
   </div>
 
 
-
-  <p>---------------------------------</p>
-<!--  {{ stores }}-->
   <RouterLink to="/cart"> <button> acheter </button> </RouterLink>
 
-<!--  <div v-for="items in stores[id - 1]">-->
-<!--    <p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
-<!--    {{ items["products"] }}-->
-<!--  </div>-->
-
-<!--  {{stores[id - 1]}}-->
-<!--  <div v-for="store in stores" :key="store.id" class="store" >-->
-<!--    <h1>store[{{ $route.params.id }}]</h1>-->
-<!--    <h3>{{ $route.params.id }}</h3>-->
-<!--    <h4>{{ store[ $route.params.id ] }}</h4>-->
-<!--  </div>-->
-<!--  {{stores[{{ $route.params.id }}]}}-->
-<!--  {{stores.find({{ $route.params.id }} ); }}-->
-
-<!--<h1>{{ stores[id - 1] }}</h1>-->
-  <p>-------------------------</p>
-
-<!--  {{ stores[id - 1].name }}-->
-
-<!--<div v-for="store in stores[id - 1]" :key="store.id">-->
-<!--  <h1> {{store[0]}}</h1>-->
-<!--</div>-->
-<!--  <h1>Object.values({{ stores[id - 1]}}).forEach(element => element.name }}</h1>-->
-
-<!--  <h1>{{ // stores[id - 1].name }}</h1>-->
 
 
-<!--<div v-for="store in stores" :key="store.id" class="store">-->
-<!--  <h1>{{stores[store.id]}}</h1>-->
-<!--  <p>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
 
-<!--</div>-->
 
 </template>
 

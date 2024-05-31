@@ -2,18 +2,17 @@
 
 import { useRoute } from 'vue-router'
 import {ref} from 'vue'
-// import { useFetch } from '@vueuse/core'
-import { stores } from '../../public/stores.json'
 import {useCartStore} from '@/stores/cart.js'
-// import {createPinia} from 'pinia'
+
 
 const cartStore = useCartStore()
-
- // const { data : product } = useFetch("https://fakestoreapi.com/products/"+useRoute().params.id).json()
+// Gets access to the current route to extract route parameters
 const route = useRoute()
+// Defines a reactive variable to store the selected product details
 const productSelected=ref(null)
-// const store = stores
+// Extracts the product ID from the route parameters
 const productId =  route.params.id
+  // Fetches product details from the API based on the product ID and stores it in the reactive variable
 fetch(`https://fakestoreapi.com/products/${productId}`)
   .then(res=>res.json())
   .then(json=>productSelected.value=json)
@@ -21,14 +20,7 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
 </script>
 
 <template>
-<!--  <p>{{productSelected}}</p>-->
-<!--  <p>{{productSelected.title}}</p>-->
-<!--  <p>{{productSelected.image}}</p>-->
-
-<!--  <div  class="p-12">-->
-<!--    <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">-->
-<!--      <li class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">-->
-<!--        <div v-for="product in productSelected" :key="product.id" class="card-body border-solid hover:border-2 hover:shadow-lg m-2 w-30 box-border">-->
+<!--  Displays the product details-->
           <h2 class="card-title text-3xl text-center box-border">{{ productSelected.title }}</h2>
           <figure class="w-32"><img  :src="productSelected.image" alt="image of product"></figure>
           <p class="text-center box-border">{{ productSelected.description }}</p>

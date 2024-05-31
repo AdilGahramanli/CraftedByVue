@@ -1,10 +1,5 @@
 <template>
-<!--  la div concept présente une image avec un dégradé. Un texte par dessus qui est cliquable.-->
-<!--  la div stores est un menu déroulant.-->
-<!--  la div produits est une image cliquable qui s'anime avec un hover
-produits est faite en priorité avec un lien cliquable vers produits-->
 
-<!--  la div devenez un vendeur est comme la div concept-->
 
 <h1>home</h1>
   <div class = "bg-fond grid grid-rows-4 gap-2 inline-block align-baseline mt-28">
@@ -25,9 +20,5 @@ produits est faite en priorité avec un lien cliquable vers produits-->
 </template>
 
 <script setup>
-// import { useFetch } from '@vueuse/core'
-// const { data: products } = useFetch('https://fakestoreapi.com/products?limit=21').json()
-// import Navbar from '@/components/Navbar.vue'
-// import AccueilCard from '@/components/AccueilCard.vue'
-import ProductList from '@/components/ProductList.vue'
+
 </script>

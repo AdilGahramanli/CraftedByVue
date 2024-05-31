@@ -2,6 +2,7 @@
 <template>
   <div  class="p-12">
     <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Loop through each product in the stores array and render a list item -->
       <li v-for="product in  stores" :key="product.id" class="store col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
                 <div class="card-body border-solid hover:border-2 hover:shadow-lg m-2 w-30 box-border">
                   <h2 class="card-title text-3xl text-center box-border">{{ product.title }}</h2>
@@ -29,10 +30,10 @@ import { ref, onMounted } from 'vue';
 import { useCartStore } from '@/stores/cart'
 
 let cartStore = useCartStore();
-
+// Defining a reactive variable 'stores' to hold the product data
     const stores = ref([]);
-
-    onMounted(() => {
+// Lifecycle hook to fetch data when the component is mounted
+onMounted(() => {
       fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(data => {console.log('data', data)

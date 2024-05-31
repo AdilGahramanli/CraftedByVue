@@ -8,14 +8,14 @@ const cartStore = useCartStore()
 <template>
   <h2>Mon panier</h2>
   <ul>
-    <li v-for="(product, index) in cartStore.getAllCartProductsToString" :key="index">
-      <p>{{ product.name }} - {{ product.price }} €</p>
+    <li v-for="(product, index) in cartStore.getAllCartProductsToString" :key="index" class="w-200 border-2">
+      <p>{{ product.id }} - {{ product.title }} - {{ product.price }} € - quantité </p>
       <button @click="cartStore.removeFromCart(index)">Remove</button>
     </li>
   </ul>
 
 
-        <RouterLink to="/payment"><button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button></RouterLink>
+<!--        <RouterLink to="/payment"><button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button></RouterLink>-->
 <!--  {{cartStore.getAllCartProductsToString()}}-->
 </template>
 
